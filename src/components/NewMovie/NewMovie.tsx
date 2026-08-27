@@ -19,15 +19,15 @@ export const NewMovie: React.FC<Props> = ({ onAdd }) => {
 
   const [count, setCount] = useState(0);
 
-  const [inputTitle, setinputTitle] = useState('');
+  const [inputTitle, setInputTitle] = useState('');
 
-  const [inputDescr, setinputDescr] = useState('');
+  const [inputDescr, setInputDescr] = useState('');
 
-  const [inputImgUrl, setinputImgUrl] = useState('');
+  const [inputImgUrl, setInputImgUrl] = useState('');
 
-  const [inputImdbUrl, setinputImdbUrl] = useState('');
+  const [inputImdbUrl, setInputImdbUrl] = useState('');
 
-  const [inputImdbId, setinputImdbId] = useState('');
+  const [inputImdbId, setInputImdbId] = useState('');
 
   const [submitAttempted, setSubmitAttempted] = useState(false);
 
@@ -69,11 +69,11 @@ export const NewMovie: React.FC<Props> = ({ onAdd }) => {
 
     setCount(prevCount => prevCount + 1);
 
-    setinputTitle('');
-    setinputDescr('');
-    setinputImgUrl('');
-    setinputImdbUrl('');
-    setinputImdbId('');
+    setInputTitle('');
+    setInputDescr('');
+    setInputImgUrl('');
+    setInputImdbUrl('');
+    setInputImdbId('');
 
     setSubmitAttempted(false);
   };
@@ -86,7 +86,7 @@ export const NewMovie: React.FC<Props> = ({ onAdd }) => {
         name="title"
         label="Title"
         value={inputTitle}
-        onChange={setinputTitle}
+        onChange={setInputTitle}
         submitAttempted={submitAttempted}
         required
       />
@@ -95,16 +95,15 @@ export const NewMovie: React.FC<Props> = ({ onAdd }) => {
         name="description"
         label="Description"
         value={inputDescr}
-        onChange={setinputDescr}
+        onChange={setInputDescr}
         submitAttempted={submitAttempted}
-        required
       />
 
       <TextField
         name="imgUrl"
         label="Image URL"
         value={inputImgUrl}
-        onChange={setinputImgUrl}
+        onChange={setInputImgUrl}
         submitAttempted={submitAttempted}
         required
         validate={isValid}
@@ -114,7 +113,7 @@ export const NewMovie: React.FC<Props> = ({ onAdd }) => {
         name="imdbUrl"
         label="Imdb URL"
         value={inputImdbUrl}
-        onChange={setinputImdbUrl}
+        onChange={setInputImdbUrl}
         submitAttempted={submitAttempted}
         required
         validate={isValid}
@@ -124,7 +123,7 @@ export const NewMovie: React.FC<Props> = ({ onAdd }) => {
         name="imdbId"
         label="Imdb ID"
         value={inputImdbId}
-        onChange={setinputImdbId}
+        onChange={setInputImdbId}
         submitAttempted={submitAttempted}
         required
       />
